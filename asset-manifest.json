@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hwIgnat/static/css/main.55580ec9.css",
+    "main.js": "/hwIgnat/static/js/main.ecc334fc.js",
+    "static/js/787.28cb0dcd.chunk.js": "/hwIgnat/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/hwIgnat/index.html",
+    "main.55580ec9.css.map": "/hwIgnat/static/css/main.55580ec9.css.map",
+    "main.ecc334fc.js.map": "/hwIgnat/static/js/main.ecc334fc.js.map",
+    "787.28cb0dcd.chunk.js.map": "/hwIgnat/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55580ec9.css",
+    "static/js/main.ecc334fc.js"
+  ]
+}
