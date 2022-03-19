@@ -21,6 +21,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "../../simple-react-homeworks/src/p2-homeworks/h1"
   ]
 }
