@@ -1,0 +1,22 @@
+.moved{
+    display: flex;
+    transform: translate(-250px);
+    transition-duration: 500ms;
+}
+.moved:hover {
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .link{
+      text-decoration: none;
+      margin: 10px;
+  }
+  .block{
+      width: 21px;
+      height: 21px;
+      margin: 10px;
+      background: greenyellow;
+  }
