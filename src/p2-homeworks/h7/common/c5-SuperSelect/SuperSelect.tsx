@@ -22,8 +22,9 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
         // onChange, onChangeOption
     
         console.log(options?.find(i=> i === e.target.value))
-        if (onChangeOption) { onChangeOption(options?.find(i=> i === e.target.value)) }
-        if (onChange) { onChange(e) }
+        onChange && onChange(e) 
+        onChangeOption && onChangeOption(e.target.value) 
+        
 
     }
 
