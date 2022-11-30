@@ -1,8 +1,13 @@
 import React, {useState} from 'react'
-import {homeWorkReducer} from './bll/homeWorkReducer'
+import {homeWorkReducer, sortDownListAC, sortEighteenListAC, sortUpListAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from './hw8.module.css'
 
-// export type UserType =
+export type UserType = {
+    _id: number,
+    name: string,
+    age: number
+}
 
 const initialPeople = [
     {_id: 0, name: 'Кот', age: 3},
@@ -14,16 +19,22 @@ const initialPeople = [
 ]
 
 function HW8() {
-    const [people, setPeople] = useState<any>(initialPeople) // need to fix any
+    const [people, setPeople] = useState<UserType []>(initialPeople) // need to fix any
 
     // need to fix any
+    // some name, age
     const finalPeople = people.map((p: any) => (
-        <div key={p._id}>
-            some name, age
-        </div>
+        <div className={s.table} key={p._id}>
+           
+                <div >{p.name} </div>
+                <div >{p.age} </div>
+            </div>
+       
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople, sortUpListAC()))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, sortDownListAC()))
+    const sortEighteen=()=> setPeople(homeWorkReducer(initialPeople, sortEighteenListAC()))
 
     return (
         <div>
@@ -32,11 +43,11 @@ function HW8() {
 
             {/*should work (должно работать)*/}
             {finalPeople}
-
+            <div className={s.content1}>
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
-            check 18
-
+            <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+            <div><SuperButton onClick={sortEighteen}>check 18</SuperButton></div>
+            </div>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}

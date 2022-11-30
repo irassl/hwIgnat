@@ -1,0 +1,14 @@
+.table {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-left: 10px;
+     
+}
+.content1 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.p {
+    padding: 0 40px;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import {homeWorkReducer} from '../homeWorkReducer'
+import {homeWorkReducer, sortDownListAC, sortEighteenListAC, sortUpListAC} from '../homeWorkReducer'
 
 let initialState: any[] // need to fix any
 
@@ -15,18 +15,27 @@ beforeEach(() => {
 })
 
 test('sort name up', () => {
-    const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'up'})
+    const action = sortUpListAC()
+    const newState = homeWorkReducer(initialState,action)
 
-    console.log(newState)
+   // console.log(newState)
+    
+    expect(newState[0].age).toBe(66) 
     // expect(...).toBe(...)
 })
 test('sort name down', () => {
-    const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'down'})
+    const action = sortDownListAC() 
+    const newState = homeWorkReducer(initialState, action)
+    
+    expect(newState[0].age).toBe(3) 
+    
 
 
 })
 test('check age 18', () => {
-    const newState = homeWorkReducer(initialState, {type: 'check', payload: 18})
-
+    const action = sortEighteenListAC()
+    const newState = homeWorkReducer(initialState, action)
+     
+    expect(newState[0].age).toBe(66) 
 
 })
